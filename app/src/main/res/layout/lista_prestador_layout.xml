@@ -17,7 +17,6 @@
         app:cardCornerRadius="8dp"
         tools:ignore="MissingConstraints">
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/card"
             android:layout_width="match_parent"
@@ -49,8 +48,11 @@
                 android:layout_height="wrap_content"
                 android:text="Ciclana de Tal "
                 android:textColor="@color/Primaria"
-                tools:layout_editor_absoluteX="63dp"
-                tools:layout_editor_absoluteY="13dp" />
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toEndOf="@+id/card_view_profile"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textProfissao"
@@ -58,8 +60,11 @@
                 android:layout_height="wrap_content"
                 android:text="Pedreiro"
                 android:textColor="@color/Primaria"
-                tools:layout_editor_absoluteX="318dp"
-                tools:layout_editor_absoluteY="84dp" />
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="4dp" />
 
             <TextView
                 android:id="@+id/textDescricao"
@@ -67,8 +72,11 @@
                 android:layout_height="wrap_content"
                 android:text="Mais de 30 Projetos Realizados"
                 android:textColor="@color/Primaria"
-                tools:layout_editor_absoluteX="65dp"
-                tools:layout_editor_absoluteY="84dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/card_view_profile"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginBottom="6dp"/>
 
             <RatingBar
                 android:id="@+id/ratingAvaliacao"
@@ -76,10 +84,13 @@
                 android:layout_width="81dp"
                 android:layout_height="19dp"
                 android:layout_centerInParent="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="18dp"
                 android:numStars="5"
                 android:stepSize="0.5"
-                tools:layout_editor_absoluteX="63dp"
-                tools:layout_editor_absoluteY="50dp" />
+                app:layout_constraintBottom_toTopOf="@+id/textDescricao"
+                app:layout_constraintStart_toEndOf="@+id/card_view_profile"
+                app:layout_constraintTop_toBottomOf="@+id/textNome" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
