@@ -49,16 +49,18 @@ class ListagemPrestadorActivity : AppCompatActivity() {
         val providerCall = retrofit.create(ProviderCalls::class.java)
         val call = providerCall.listProviders()
 
-        call.enqueue(object : retrofit2.Callback<List<PrestadorDeServico>>{
+        call.enqueue(object : Callback<List<PrestadorDeServico>>{
 
             override fun onFailure(call: Call<List<PrestadorDeServico>>, t: Throwable) {
                 Toast.makeText(this@ListagemPrestadorActivity, "Ops! Acho que ocorreu um problema.", Toast.LENGTH_SHORT).show()
                 Log.e("Erro_CONEXÃO", t.message.toString())
             }
             override fun onResponse(call: Call<List<PrestadorDeServico>>, response: Response<List<PrestadorDeServico>>) {
+
+                Log.e("ssss", response.body().toString())
                 providerList = response.body()!!
 
-                adapterServiceProviders.updateCategoryList(providerList)
+                adapterServiceProviders.updateProviderList(providerList)
             }
         })
     }

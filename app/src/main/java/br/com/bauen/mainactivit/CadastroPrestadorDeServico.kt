@@ -12,10 +12,8 @@ import androidx.core.view.isVisible
 import br.com.bauen.mainactivit.cep.Cep
 import br.com.bauen.mainactivit.cep.RetrofitFactory
 import br.com.bauen.mainactivit.http.HttpHelper
-import br.com.bauen.mainactivit.tables.Cliente
 import br.com.bauen.mainactivit.tables.Endereco
 import br.com.bauen.mainactivit.tables.PrestadorDeServico
-import br.com.bauen.mainactivit.ultis.MaskFormatUtil
 import com.google.gson.Gson
 import org.jetbrains.anko.doAsync
 import retrofit2.Call
